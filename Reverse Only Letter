@@ -1,0 +1,30 @@
+//Reverse only letters
+int main()
+{
+	int i,j=0,k;
+	char a[1000],b[1000],c[1000];
+	gets(a);
+	for(i=0;a[i]!='\0';i++)
+	{
+		c[i]=a[i];
+		if((a[i]>=65&&a[i]<=90)||a[i]>=97&&a[i]<=122)
+		{
+			b[j]=a[i];
+			j++;
+		}
+	}
+	c[i]='\0';
+	b[j]='\0';
+	strrev(b);
+	j=0;
+	for(i=0;c[i]!='\0';i++)
+	{
+		if((c[i]>=65&&c[i]<=90)||c[i]>=97&&c[i]<=122)
+		{
+			c[i]=b[j];
+			j++;
+		}
+	}
+	printf("%s",c);
+	
+}
